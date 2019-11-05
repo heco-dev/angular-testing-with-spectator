@@ -1,0 +1,15 @@
+<div style="padding:1em;margin:1em;">
+  <p style="color: green;padding:0;margin:0;">app-customers component</p>
+  <div style="border: green 1px solid;">
+    <h4>Hello, {{ userName }}!</h4>
+    <p style="text-decoration:underline;padding:0;margin:0;">Customers list:</p>
+    <ul *ngIf="customers$ | async as customers; else empty">
+      <li *ngFor="let customer of customers">
+        {{ customer.name }} (id: {{ customer.id }})
+      </li>
+    </ul>
+    <ng-template #empty>
+      <span>fetching customer data...</span>
+    </ng-template>
+  </div>
+</div>

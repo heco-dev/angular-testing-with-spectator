@@ -1,0 +1,15 @@
+<div style="padding:1em;margin:1em;">
+  <p style="color: blue;padding:0;margin:0;">app-customers-new component</p>
+  <div style="border: blue 1px solid;">
+    <br>
+    <p style="text-decoration:underline;padding:0;margin:0;">New Customers list:</p>
+    <ul *ngIf="newCustomers$ | async as newCustomers; else empty">
+      <li *ngFor="let newCustomer of newCustomers">
+        {{ newCustomer.name }} (id: {{ newCustomer.id }})
+      </li>
+    </ul>
+    <ng-template #empty>
+      <span>fetching new customer data...</span>
+    </ng-template>
+  </div>
+</div>
