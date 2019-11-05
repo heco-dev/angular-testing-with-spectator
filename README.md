@@ -1,3 +1,3 @@
-# angular-datastore-facade-pattern
+# Trying out ngneat/spectator testing framework
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-datastore-facade-pattern)
+https://github.com/ngneat/spectator
